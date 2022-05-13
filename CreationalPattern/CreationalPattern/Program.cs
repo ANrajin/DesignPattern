@@ -1,5 +1,7 @@
 ﻿using CreationalPattern.Singleton;
 
+
+/*Singleton*/
 Logger fromFather = Logger.GetLogger();
 fromFather.Write("Father instantiated");
 
