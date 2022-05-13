@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CreationalPattern.Singleton
 {
+    //sealed ensures that the class connot be inherited
     public sealed class Logger
     {
+        private static int count;
         private static Logger? _instance;
 
         /*
@@ -16,6 +18,8 @@ namespace CreationalPattern.Singleton
          */
         private Logger()
         {
+            count++;
+            Console.WriteLine($"Intantiated {count} times");
         }
 
         /*
