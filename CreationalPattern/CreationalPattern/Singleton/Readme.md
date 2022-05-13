@@ -2,7 +2,7 @@
 class is going to be created and then provide simple global access to that instance for the entire application.
 
 
-####Advantages of using the Singleton Pattern
+#### Advantages of using the Singleton Pattern
 
 -	The first and most important advantage of using the singleton design pattern in C# is that 
 	it takes care of concurrent access to the shared resource. That means if we are sharing a 
@@ -21,7 +21,7 @@ class is going to be created and then provide simple global access to that insta
 
 
 
-####Implementation Guidelines
+#### Implementation Guidelines
 -	You need to declare a constructor that should be private and parameterless. This is required because 
 	it is not allowed the class to be instantiated from outside the class. It only instantiates from within 
 	the class
