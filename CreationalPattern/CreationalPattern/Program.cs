@@ -1,5 +1,6 @@
 ﻿using CreationalPattern.Singleton;
 using CreationalPattern.Prototype;
+using CreationalPattern.Builder;
 
 
 /*Singleton*/
@@ -20,3 +21,11 @@ zoombie.Speed = 300;
 //clone the object form the prototype
 var zoombie1 = zoombie.Copy();
 Console.WriteLine(zoombie1.Look);
+
+/*Builder*/
+CarBuilder builder = new CarBuilder();
+Car c = builder.AddColor("Red")
+    .AddDoor()
+    .AddWheels()
+    .AddEngine()
+    .Build();
