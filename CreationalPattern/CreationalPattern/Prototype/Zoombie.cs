@@ -13,9 +13,10 @@ namespace CreationalPattern.Prototype
         public double Health { get; set; }
         public double Speed { get; set; }
 
+        //microsoft built in
         public object Clone()
         {
-            return Copy();
+            return (Zoombie)Copy();
         }
 
         public Zoombie Copy()
