@@ -3,6 +3,7 @@ using CreationalPattern.Prototype;
 using CreationalPattern.Builder;
 using CreationalPattern.Factory;
 using CreationalPattern.FactoryMethod;
+using CreationalPattern.AbstractFactory;
 
 
 /*Singleton*/
@@ -53,3 +54,10 @@ if(creditCard != null)
     Console.WriteLine(creditCard.GetCreditLimit());
     Console.WriteLine(creditCard.GetAnnualCharge());
 }
+
+
+/*Abstract Factory*/
+MilitaryFactory militaryFactory = new AmericanMilitaryFactory();
+
+Fighter fighter = militaryFactory.GetFighter();//F16
+Ship ship = militaryFactory.GetShip();//Carrier
