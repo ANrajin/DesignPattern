@@ -1,6 +1,7 @@
 ﻿using CreationalPattern.Singleton;
 using CreationalPattern.Prototype;
 using CreationalPattern.Builder;
+using CreationalPattern.Factory;
 
 
 /*Singleton*/
@@ -29,3 +30,14 @@ Car c = builder.AddColor("Red")
     .AddWheels()
     .AddEngine()
     .Build();
+
+
+/*Factory*/
+CreditCard cardDetails = CardFactory.GetCard("Titanium");
+
+if(cardDetails != null)
+{
+    Console.WriteLine(cardDetails.GetCardType());
+    Console.WriteLine(cardDetails.GetCreditLimit());
+    Console.WriteLine(cardDetails.GetAnnualCharge());
+}
