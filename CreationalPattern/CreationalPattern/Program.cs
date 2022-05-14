@@ -2,6 +2,7 @@
 using CreationalPattern.Prototype;
 using CreationalPattern.Builder;
 using CreationalPattern.Factory;
+using CreationalPattern.FactoryMethod;
 
 
 /*Singleton*/
@@ -40,4 +41,15 @@ if(cardDetails != null)
     Console.WriteLine(cardDetails.GetCardType());
     Console.WriteLine(cardDetails.GetCreditLimit());
     Console.WriteLine(cardDetails.GetAnnualCharge());
+}
+
+
+/*Factory Method*/
+var creditCard = new PlatinumFactory().Create();
+
+if(creditCard != null)
+{
+    Console.WriteLine(creditCard.GetCardType());
+    Console.WriteLine(creditCard.GetCreditLimit());
+    Console.WriteLine(creditCard.GetAnnualCharge());
 }
